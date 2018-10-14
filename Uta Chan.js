@@ -13,3 +13,8 @@ Music.start(client, {
 
 client.login(bottoken);
 console.log(`Uta Chan is now online`);
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag} (${client.user.id}) on ${client.guilds.size} server(s)`);
+  client.user.setActivity('music on headphone');
+});
